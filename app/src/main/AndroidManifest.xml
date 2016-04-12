@@ -16,13 +16,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.marcus.knowYou.Login">
+        <activity android:name="com.example.marcus.knowYou.Login"/>
 
-        </activity>
+        <activity android:name="com.example.marcus.knowYou.Register"/>
 
-        <activity android:name="com.example.marcus.knowYou.Register">
-
-        </activity>
     </application>
 
 </manifest>

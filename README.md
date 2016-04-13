@@ -2,7 +2,7 @@
 用于服务外包比赛。
 # 2016.4.12
 ## 1.
-解决了底部导航栏在不同设备的显示错位问题,把ImageView和TextView分别放入两个FrameLayout中,然后都在FrameLayout设置中居中显示,
+解决了底部导航栏在不同设备的显示错位问题,把ImageView和TextView分别放入两个FrameLayout中,然后都在FrameLayout中设置居中显示,
 这就保证了在不同尺寸的手机中都能达到预期的效果.
 ## 2.
 google中查找到的答案,可以为FragmentTabHost中的标签页设置点击事件,如代码中的tabHost.getTabWidget().getChildAt(2).setOnClickListener(.....),

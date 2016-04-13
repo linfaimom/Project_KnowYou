@@ -1,4 +1,4 @@
-package com.example.marcus.knowYou.Fragments;
+package com.example.marcus.knowYou.NaviFragments;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import com.example.marcus.knowYou.R;
 /**
  * Created by marcus on 16/4/8.
  */
-public class Clothes extends Fragment {
+public class Messages extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.clothes,null);
+        return inflater.inflate(R.layout.hotels,null);
     }
 }

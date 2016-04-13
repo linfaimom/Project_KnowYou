@@ -1,4 +1,4 @@
-package com.example.marcus.knowYou.Fragments;
+package com.example.marcus.knowYou.NaviFragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

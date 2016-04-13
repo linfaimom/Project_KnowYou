@@ -1,4 +1,4 @@
-package com.example.marcus.knowYou.Fragments;
+package com.example.marcus.knowYou.NaviFragments;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;

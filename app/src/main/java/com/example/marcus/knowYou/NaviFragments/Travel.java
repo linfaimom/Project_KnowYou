@@ -25,7 +25,7 @@ public class Travel extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.clothes,null);
+        View view = inflater.inflate(R.layout.travel,null);
         listView = (ListView) view.findViewById(R.id.list);
         showListView();
         listViewSelected();

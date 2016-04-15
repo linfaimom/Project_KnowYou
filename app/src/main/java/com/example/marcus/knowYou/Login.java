@@ -22,12 +22,10 @@ import com.example.marcus.knowYou.NaviFragments.Me;
  */
 
 public class Login extends FragmentActivity {
-    //View
-    private View bottomNavTab;
     //Fragments
     private Class[] fragments = new Class[]{Travel.class, Neighbor.class, null, Messages.class, Me.class};
     //labels
-    private String[] labels = new String[]{"旅行", "附近", "null", "消息", "我的"};
+    private String[] labels = new String[]{"旅行", "附近", "null", "消息", "我"};
     //label_ids
     private String[] label_ids = new String[]{"travel", "gps", "null", "messages", "me"};
     //pictures
@@ -68,7 +66,7 @@ public class Login extends FragmentActivity {
             private void showPopWindow(View v) {
                 final View outer = v;
                 final int HEIGHT = 400;
-                View view = LayoutInflater.from(Login.this).inflate(R.layout.show, null);
+                View view = LayoutInflater.from(Login.this).inflate(R.layout.showpopupwindow, null);
                 PopupWindow popWindow = new PopupWindow(view, ViewGroup.LayoutParams.MATCH_PARENT, HEIGHT);
                 popWindow.setTouchable(true);
                 popWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
@@ -92,7 +90,7 @@ public class Login extends FragmentActivity {
         View view = null;
         //单独为其设置按钮样式
         if (i == 2) {
-            view = inflater.inflate(R.layout.button_view, null);
+            view = inflater.inflate(R.layout.showpopupwindow_button, null);
             final ImageView button = (ImageView) view.findViewById(R.id.button);
             button.setImageResource(R.drawable.show);
             return view;

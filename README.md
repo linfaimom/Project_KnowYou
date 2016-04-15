@@ -6,4 +6,6 @@
 # 2016.4.13
 ### 1.在PopUpWindow中错用了方法setTouchInterceptor(),使得出现了按回退键时"+"不能变为"x".经摸索后,发现PopUpWindow有一个setOnDismissListener(....)方法,即在PopUpWindow窗口消失时调用的方法,于是改用此方法,成功解决上述问题.
 ### 2.更改了底部导航栏的标签信息,并新增了4个Fragment用于下次实现结合ViewPager的滑页功能.
+# 2016.4.14
+### 使用了开源组件PagerSlidingTabStrip结合ViewPager实现了"附近"标签页中顶部导航栏加滑页的功能.
 

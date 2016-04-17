@@ -1,4 +1,4 @@
-package com.example.marcus.knowYou.ViewPagerFragment;
+package com.example.marcus.knowYou.DiscoverFragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

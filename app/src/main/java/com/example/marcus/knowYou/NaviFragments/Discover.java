@@ -13,24 +13,24 @@ import android.view.ViewGroup;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.example.marcus.knowYou.R;
-import com.example.marcus.knowYou.ViewPagerFragment.Clothes;
-import com.example.marcus.knowYou.ViewPagerFragment.Foods;
-import com.example.marcus.knowYou.ViewPagerFragment.Hotels;
-import com.example.marcus.knowYou.ViewPagerFragment.Transports;
+import com.example.marcus.knowYou.DiscoverFragments.Clothes;
+import com.example.marcus.knowYou.DiscoverFragments.Foods;
+import com.example.marcus.knowYou.DiscoverFragments.Hotels;
+import com.example.marcus.knowYou.DiscoverFragments.Transports;
 
 import java.util.ArrayList;
 
 /**
  * Created by marcus on 16/4/8.
  */
-public class Neighbor extends Fragment {
+public class Discover extends Fragment {
     private ArrayList<Fragment> fragments;
     private String[] tabNames = new String[]{"最美穿撘","必吃美食","住得起所","畅所欲行"};
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.neighbor_viewpager,null);
+        View view = inflater.inflate(R.layout.discover_viewpager,null);
         addFragments();
         ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getChildFragmentManager(), fragments);

@@ -13,8 +13,8 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.example.marcus.knowYou.NaviFragments.Travel;
-import com.example.marcus.knowYou.NaviFragments.Neighbor;
-import com.example.marcus.knowYou.NaviFragments.Messages;
+import com.example.marcus.knowYou.NaviFragments.Discover;
+import com.example.marcus.knowYou.NaviFragments.Community;
 import com.example.marcus.knowYou.NaviFragments.Me;
 
 /**
@@ -23,13 +23,13 @@ import com.example.marcus.knowYou.NaviFragments.Me;
 
 public class Login extends FragmentActivity {
     //Fragments
-    private Class[] fragments = new Class[]{Travel.class, Neighbor.class, null, Messages.class, Me.class};
+    private Class[] fragments = new Class[]{Travel.class, Discover.class, null, Community.class, Me.class};
     //labels
-    private String[] labels = new String[]{"旅行", "附近", "null", "消息", "我"};
+    private String[] labels = new String[]{"旅行", "发现", "null", "社区", "我"};
     //label_ids
     private String[] label_ids = new String[]{"travel", "gps", "null", "messages", "me"};
     //pictures
-    private int[] pictures = new int[]{R.drawable.travel_change, R.drawable.gps_change,
+    private int[] pictures = new int[]{R.drawable.travel_change, R.drawable.discover_change,
             R.drawable.hotels_change, R.drawable.message_change, R.drawable.me_change};
     //TabHost
     private FragmentTabHost tabHost;
@@ -37,7 +37,7 @@ public class Login extends FragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tab_layout);
+        setContentView(R.layout.bottom_fragmenttabhost_layout);
         //initView
         initView();
     }
@@ -95,7 +95,7 @@ public class Login extends FragmentActivity {
             button.setImageResource(R.drawable.show);
             return view;
         } else {
-            view = inflater.inflate(R.layout.tab_view, null);
+            view = inflater.inflate(R.layout.bottom_fragmenttabhost_tabview, null);
             ((TextView) view.findViewById(R.id.tabname)).setText(labels[i]);
             ((ImageView) view.findViewById(R.id.tabpicture)).setImageResource(pictures[i]);
             return view;

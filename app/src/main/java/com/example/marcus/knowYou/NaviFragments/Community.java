@@ -12,7 +12,7 @@ import com.example.marcus.knowYou.R;
 /**
  * Created by marcus on 16/4/8.
  */
-public class Messages extends Fragment {
+public class Community extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

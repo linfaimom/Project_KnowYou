@@ -1,4 +1,4 @@
-package com.example.marcus.knowYou.ViewPagerFragment;
+package com.example.marcus.knowYou.DiscoverFragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,10 +12,10 @@ import com.example.marcus.knowYou.R;
 /**
  * Created by marcus on 16/4/13.
  */
-public class Hotels extends Fragment {
+public class Clothes extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.hotels,null);
+        return inflater.inflate(R.layout.clothes,null);
     }
 }

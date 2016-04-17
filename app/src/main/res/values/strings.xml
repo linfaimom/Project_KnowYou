@@ -5,4 +5,6 @@
     <string name="other_logins">其他登录方式</string>
     <string name="user">用户名:</string>
     <string name="passwd">密码:</string>
+    <string name="load">Welcome!</string>
+    <string name="forget">忘记密码?</string>
 </resources>

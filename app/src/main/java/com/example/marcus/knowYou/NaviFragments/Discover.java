@@ -17,6 +17,7 @@ import com.example.marcus.knowYou.DiscoverFragments.Clothes;
 import com.example.marcus.knowYou.DiscoverFragments.Foods;
 import com.example.marcus.knowYou.DiscoverFragments.Hotels;
 import com.example.marcus.knowYou.DiscoverFragments.Transports;
+import com.flyco.tablayout.SlidingTabLayout;
 
 import java.util.ArrayList;
 
@@ -26,19 +27,19 @@ import java.util.ArrayList;
 public class Discover extends Fragment {
     private ArrayList<Fragment> fragments;
     private String[] tabNames = new String[]{"最美穿撘","必吃美食","住得起所","畅所欲行"};
+    private SlidingTabLayout tabs;
+    private ViewPager viewPager;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.discover_viewpager,null);
         addFragments();
-        ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewpager);
+        viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getChildFragmentManager(), fragments);
         viewPager.setAdapter(adapter);
-        PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) view.findViewById(R.id.tabs);
+        tabs = (SlidingTabLayout) view.findViewById(R.id.tabs);
         tabs.setViewPager(viewPager);
-        tabs.setIndicatorColor(Color.RED);
-        tabs.setIndicatorHeight(5);
         return view;
     }
 

@@ -15,3 +15,5 @@
 # 2016.4.17
 ### 1.在fragment"必吃美食"中加入了自定义的ListView.
 ### 2.晚上开会讨论后,更改了底部导航栏的命名,改天实现fragment"旅游"界面,打算同样采用PagerSlidingTabStrip结合ViewPager的方法实现.
+# 2016.4.18
+### 改用FlycoTablayout实现Discover中的顶部导航栏与滑动,实现了选中标签页时改变字体颜色.

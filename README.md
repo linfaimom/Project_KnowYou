@@ -19,7 +19,7 @@
 ### 弃用了PagerSlidingTabStrip,改用开源组件FlycoTablayout中的SlidingTabLayout实现Discover中的顶部导航栏与滑动,实现了选中标签页时改变字体颜色,并将指示器的样式改变为了小三角形.
 # 2016.4.23
 ### 我的天,这五天我在干啥,好像都没干什么事情...还是总结一下吧:
-### 1.在"旅行中"加入了"推荐"和"驴友"这两个Fragment,使用开源组件FlycoTabLayout中的SlidingTabLayout结合ViewPager实现了顶部导航栏与滑动.
+### 1.在"旅行"中加入了"推荐"和"驴友"这两个Fragment,使用开源组件FlycoTabLayout中的SlidingTabLayout结合ViewPager实现了顶部导航栏与滑动.
 ### 2.增添了一个搜索图标,点击跳转到"Search"Activity,里面有个并没什么卵用的搜索框,使用了AutoCompleteTextView,绑定了一些数据,在其中输入几个字会有下拉栏提示补全.还弄了个消息图标,不过还没给它绑定任何事件.
 ### 3.在"推荐"中加入了一个ViewPager,展示了四张风景图片.
 ### 4.将顶部底部导航栏的background都改成了白色,里面界面的background改成稍微有点灰色的颜色.

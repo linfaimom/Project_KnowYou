@@ -1,21 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.astuetz.PagerSlidingTabStrip
-        android:id="@+id/tabs"
+    <RelativeLayout
+        android:id="@+id/tablayout"
+        android:background="@android:color/white"
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-    </com.astuetz.PagerSlidingTabStrip>
+        <ImageButton
+            android:id="@+id/search"
+            android:src="@drawable/search"
+            android:background="#00000000"
+            android:layout_marginTop="11dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tabs"
+            app:tl_tab_space_equal="true"
+            app:tl_tab_padding="25dp"
+            app:tl_textsize="20sp"
+            app:tl_textUnselectColor="#000000"
+            app:tl_textSelectColor="#ab2c2c"
+            app:tl_indicator_color="#ab2c2c"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"/>
+
+        <ImageButton
+            android:id="@+id/message"
+            android:src="@drawable/message"
+            android:background="#00000000"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
 
     <android.support.v4.view.ViewPager
-        android:layout_below="@id/tabs"
         android:id="@+id/viewpager"
+        android:layout_below="@id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     </android.support.v4.view.ViewPager>
 
-</LinearLayout>
+</RelativeLayout>

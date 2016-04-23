@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.astuetz.PagerSlidingTabStrip;
 import com.example.marcus.knowYou.R;
 import com.example.marcus.knowYou.DiscoverFragments.Clothes;
 import com.example.marcus.knowYou.DiscoverFragments.Foods;

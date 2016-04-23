@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
     <FrameLayout
+        android:layout_marginTop="3dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -12,9 +13,11 @@
             android:id="@+id/tabpicture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
     </FrameLayout>
 
     <FrameLayout
+        android:layout_marginTop="4dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Zhejiang">
+        <item>浙江台州市</item>
+        <item>浙江温州市</item>
+        <item>浙江宁波市</item>
+        <item>浙江衢州市</item>
+        <item>浙江金华市</item>
+        <item>浙江绍兴市</item>
+        <item>浙江嘉兴市</item>
+        <item>浙江湖州市</item>
+        <item>浙江丽水市</item>
+    </string-array>
+</resources>

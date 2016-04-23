@@ -16,11 +16,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".Login"/>
 
-        <activity android:name="com.example.marcus.knowYou.Login"/>
+        <activity android:name=".Main"/>
 
         <activity android:name="com.example.marcus.knowYou.Register"/>
+
+        <activity android:name=".Search"/>
 
     </application>
 

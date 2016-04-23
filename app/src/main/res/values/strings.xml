@@ -7,4 +7,5 @@
     <string name="passwd">密码:</string>
     <string name="load">Welcome!</string>
     <string name="forget">忘记密码?</string>
+    <string name="search_hint">搜索旅游城市或者驴友</string>
 </resources>

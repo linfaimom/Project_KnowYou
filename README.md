@@ -26,3 +26,4 @@
 ### 5.调整了PopUpWindow的显示高度,确保在不同的设备中有相同的显示效果.
 # 2016.4.24
 ### 在suggest布局中加入了自定义的ScrollView控件,让视图可向下滑动,同时完美解决了与布局中嵌套的ViewPager控件的冲突问题.
+### 在每日精选主题的ViewPager中加入了小圆点指示器,利用了开源组件CircleIndicator

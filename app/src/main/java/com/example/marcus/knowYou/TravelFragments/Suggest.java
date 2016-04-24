@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,17 +14,22 @@ import com.example.marcus.knowYou.R;
 
 import java.util.ArrayList;
 
+import me.relex.circleindicator.CircleIndicator;
+
 
 /**
  * Created by marcus on 16/4/17.
  */
-public class Suggest extends Fragment {
+public class Suggest extends Fragment implements ViewPager.OnPageChangeListener{
     private ViewPager viewPager;
-    private int[] imagesId = new int[]{R.drawable.scene1,R.drawable.scene2,R.drawable.scene3,R.drawable.scene4};
+    //在第一个位置和最后一个位置分别添加最后一张和第一张图片,用于实现循环滑动
+    private int[] imagesId = new int[]{R.drawable.scene1,R.drawable.scene2,
+            R.drawable.scene3,R.drawable.scene4};
     private String[] imagesIdNames = new String[]{"image1","image2","image3","image4","image5"};
     private ArrayList<View> viewPagerList;
     private View view;
     private LayoutInflater inflater;
+    private CircleIndicator indicator;
 
     @Nullable
     @Override
@@ -38,6 +42,7 @@ public class Suggest extends Fragment {
 
     private void setViewPager() {
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
+        indicator = (CircleIndicator) view.findViewById(R.id.indicator);
         viewPagerList = new ArrayList<>();
         for (int i=0; i<imagesId.length; i++){
             View imageView = inflater.inflate(R.layout.suggest_viewpager_views,null);
@@ -46,6 +51,8 @@ public class Suggest extends Fragment {
             viewPagerList.add(imageView);
         }
         viewPager.setAdapter(new MyPagerAdapter(viewPagerList));
+        viewPager.setOnPageChangeListener(this);
+        indicator.setViewPager(viewPager);
     }
 
     //ViewPager适配器
@@ -77,6 +84,24 @@ public class Suggest extends Fragment {
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView(viewPagerList.get(position));
         }
+
+
+
+    }
+
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+
     }
 
 }

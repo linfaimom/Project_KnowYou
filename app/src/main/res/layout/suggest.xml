@@ -1,35 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.marcus.knowYou.Solutions.VerticalScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.marcus.knowYou.Solutions.VerticalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
+            android:layout_marginTop="3dp"
+            android:text="@string/day"
+            android:textColor="@color/color_white"
+            android:drawableLeft="@drawable/triangle"
+            android:drawableStart="@drawable/triangle"
+            android:background="@color/color_cd3e3a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.marcus.knowYou.Solutions.ChildViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+            </com.example.marcus.knowYou.Solutions.ChildViewPager>
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicator"
+                android:layout_alignParentBottom="true"
+                app:ci_drawable="@color/color_orange"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+        </RelativeLayout>
+
+        <TextView
             android:layout_marginTop="10dp"
             android:text="@string/day"
+            android:textColor="@color/color_white"
             android:drawableLeft="@drawable/triangle"
-            android:background="@android:color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="120dp">
-
-        </android.support.v4.view.ViewPager>
-
-        <ImageView
-            android:src="@drawable/scene1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <ImageView
-            android:src="@drawable/scene2"
+            android:drawableStart="@drawable/triangle"
+            android:background="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

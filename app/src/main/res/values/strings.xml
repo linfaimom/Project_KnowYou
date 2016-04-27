@@ -8,5 +8,7 @@
     <string name="load">Welcome!</string>
     <string name="forget">忘记密码?</string>
     <string name="search_hint">搜索旅游城市或者驴友</string>
-    <string name="day">每日精选主题</string>
+    <string name="theme">最新主题</string>
+    <string name="month">精选月刊</string>
+    <string name="share">热门分享</string>
 </resources>

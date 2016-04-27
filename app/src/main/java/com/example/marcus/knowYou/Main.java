@@ -9,7 +9,6 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -86,6 +85,8 @@ public class Main extends FragmentActivity {
                 popWindow.showAsDropDown(v);
             }
         });
+
+
     }
 
     //返还自定义样式

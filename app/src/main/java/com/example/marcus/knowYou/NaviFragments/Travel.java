@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.marcus.knowYou.R;
 import com.example.marcus.knowYou.Search;
@@ -87,5 +88,6 @@ public class Travel extends Fragment {
         public CharSequence getPageTitle(int position) {
             return tabNames[position];
         }
+
     }
 }

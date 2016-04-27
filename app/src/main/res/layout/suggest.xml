@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.marcus.knowYou.Solutions.VerticalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.emilsjolander.components.StickyScrollViewItems.StickyScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_marginTop="3dp"
-            android:text="@string/day"
+            android:tag="sticky"
+            android:layout_marginTop="6dp"
+            android:text="@string/theme"
+            android:textSize="16sp"
             android:textColor="@color/color_white"
             android:drawableLeft="@drawable/triangle"
             android:drawableStart="@drawable/triangle"
@@ -25,7 +30,7 @@
             <com.example.marcus.knowYou.Solutions.ChildViewPager
                 android:id="@+id/viewpager"
                 android:layout_width="match_parent"
-                android:layout_height="120dp">
+                android:layout_height="80dp">
 
             </com.example.marcus.knowYou.Solutions.ChildViewPager>
 
@@ -39,15 +44,82 @@
         </RelativeLayout>
 
         <TextView
-            android:layout_marginTop="10dp"
-            android:text="@string/day"
+            android:tag="sticky"
+            android:layout_marginTop="6dp"
+            android:text="@string/month"
+            android:textSize="16sp"
             android:textColor="@color/color_white"
             android:drawableLeft="@drawable/triangle"
             android:drawableStart="@drawable/triangle"
-            android:background="@color/colorPrimary"
+            android:background="@color/color_cd3e3a"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:horizontalSpacing="4dp"
+            android:numColumns="2" />
+
+        <TextView
+            android:tag="sticky"
+            android:layout_marginTop="4dp"
+            android:text="@string/share"
+            android:textSize="16sp"
+            android:textColor="@color/color_white"
+            android:drawableLeft="@drawable/triangle"
+            android:drawableStart="@drawable/triangle"
+            android:background="@color/color_cd3e3a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:tag="sticky"
+            android:background="@color/color_white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:text="全部"
+                android:textAlignment="center"
+                android:button="@null"
+                android:textSize="20sp"
+                android:gravity="left|center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:text="图文"
+                android:textAlignment="center"
+                android:button="@null"
+                android:textSize="20sp"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:text="视频"
+                android:textAlignment="center"
+                android:button="@null"
+                android:textSize="20sp"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+
+        <com.example.marcus.knowYou.Solutions.CustomListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.example.marcus.knowYou.Solutions.CustomListView>
+
     </LinearLayout>
 
-</com.example.marcus.knowYou.Solutions.VerticalScrollView>
+</com.emilsjolander.components.StickyScrollViewItems.StickyScrollView>

@@ -8,12 +8,15 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 import com.example.marcus.knowYou.R;
+import com.nightonke.boommenu.BoomMenuButton;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,11 +36,21 @@ public class Suggest extends Fragment {
     private ListView shareListView;
     private int[] imagesId = new int[]{R.drawable.scene1,R.drawable.scene2,
             R.drawable.scene3,R.drawable.scene4};
-    private String[] imagesIdNames = new String[]{"image1","image2","image3","image4"};
     private ArrayList<View> viewPagerList;
     private ArrayList<Map<String,Integer>> gridViewList;
-    private ArrayList<Map<String,String>> listViewItems;
     private CircleIndicator indicator;
+    String[][] infos = new String[][]{
+            {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"},
+            {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"},
+            {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"},
+            {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"},
+            {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"},
+            {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"},
+            {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"},
+            {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"},
+            {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"},
+            {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"}
+    };
 
     @Nullable
     @Override
@@ -52,32 +65,7 @@ public class Suggest extends Fragment {
 
     private void setListView() {
         shareListView = (ListView) view.findViewById(R.id.listview);
-        String[][] infos = new String[][]{
-                {"七里香","123"},
-                {"扬州风味","123"},
-                {"巴比汉堡","123"},
-                {"东吴人家","123"},
-                {"街7中式快餐","123"},
-                {"东吴人家","123"},
-                {"台湾烤鱼","123"},
-                {"正宗韩国快餐","123"},
-                {"麦尚堡","123"},
-                {"贝壳汉堡","123"}
-        };
-        listViewItems = new ArrayList<>();
-        for (int i=0; i<infos.length; i++){
-            Map<String,String> map = new HashMap<>();
-            map.put("pic",String.valueOf(R.drawable.girl));
-            map.put("title",infos[i][0]);
-            map.put("info",infos[i][1]);
-            map.put("star",String.valueOf(R.drawable.clothes));
-            map.put("type","浙师大北门");
-            listViewItems.add(map);
-        }
-        SimpleAdapter adapter = new SimpleAdapter(getActivity(),listViewItems,R.layout.foods_listview,
-                new String[]{"pic","title","info","star","type"},
-                new int[]{R.id.pic,R.id.title,R.id.info,R.id.star,R.id.type});
-        shareListView.setAdapter(adapter);
+        shareListView.setAdapter(new MyBaseAdapter());
     }
 
     private void setGridView() {
@@ -154,6 +142,64 @@ public class Suggest extends Fragment {
             container.removeView(viewPagerList.get(position));
         }
 
+    }
+
+    //ListView适配器
+    class MyBaseAdapter extends BaseAdapter {
+
+        @Override
+        public int getCount() {
+            return infos.length;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            ViewHolder viewHolder;
+
+            if (convertView == null){
+                convertView = inflater.inflate(R.layout.share_listview,null);
+                viewHolder = new ViewHolder();
+                viewHolder.userPic = (ImageView) convertView.findViewById(R.id.user_pic);
+                viewHolder.nickName = (TextView) convertView.findViewById(R.id.nickname);
+                viewHolder.content = (TextView) convertView.findViewById(R.id.content);
+                viewHolder.image1 = (ImageView) convertView.findViewById(R.id.image1);
+                viewHolder.image2 = (ImageView) convertView.findViewById(R.id.image2);
+                viewHolder.time = (TextView) convertView.findViewById(R.id.time);
+                viewHolder.menu = (BoomMenuButton) convertView.findViewById(R.id.boom_circle);
+                convertView.setTag(viewHolder);
+            }
+            else {
+                viewHolder = (ViewHolder) convertView.getTag();
+            }
+            viewHolder.userPic.setImageResource(R.drawable.godxiang);
+            viewHolder.nickName.setText(infos[position][0]);
+            viewHolder.content.setText(infos[position][1]);
+            viewHolder.image1.setImageResource(R.drawable.girl);
+            //image2
+
+            viewHolder.time.setText("1小时前");
+            return convertView;
+        }
+
+        class ViewHolder {
+            ImageView userPic;
+            TextView nickName;
+            TextView content;
+            ImageView image1;
+            ImageView image2;
+            TextView time;
+            BoomMenuButton menu;
+        }
     }
 
 }

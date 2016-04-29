@@ -31,6 +31,8 @@ dependencies {
     compile 'com.felipecsl.asymmetricgridview:library:2.0.1'
     compile 'se.emilsjolander:StickyScrollViewItems:1.1.0'
     compile 'com.etsy.android.grid:library:+'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.nightonke:boommenu:1.0.8'
 }
 
 

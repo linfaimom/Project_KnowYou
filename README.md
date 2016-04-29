@@ -29,3 +29,5 @@
 ### 在每日精选主题的ViewPager中加入了小圆点指示器,利用了开源组件CircleIndicator
 # 2016.4.26
 ### 利用开源组件StickyScrollView实现了滑动时候顶部悬浮的效果,同时在其中嵌入了一个重写了onMeasure()方法的ListView,并将其至于布局底部,此时,当滑动到ListView时继续向下滑动就是ListView里面的items在滚动了.
+# 2016.4.28
+### 实现了热门分享里的列表,模仿微信朋友圈的显示效果.

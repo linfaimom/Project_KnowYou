@@ -41,7 +41,7 @@ public class Foods extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.foods,null);
+        View view = inflater.inflate(R.layout.discover_foods,null);
         foodsList = (ListView) view.findViewById(R.id.foodsList);
         initList();
         setAdapter();
@@ -55,14 +55,14 @@ public class Foods extends Fragment {
             map.put("pic",String.valueOf(R.drawable.girl));
             map.put("title",infos[i][0]);
             map.put("info",infos[i][1]);
-            map.put("star",String.valueOf(R.drawable.clothes));
+            map.put("star",String.valueOf(R.drawable.me));
             map.put("type","浙师大北门");
             list.add(map);
         }
     }
 
     private void setAdapter() {
-        adapter = new SimpleAdapter(getActivity(),list,R.layout.foods_listview,
+        adapter = new SimpleAdapter(getActivity(),list,R.layout.discover_foods_listview,
                 new String[]{"pic","title","info","star","type"},
                 new int[]{R.id.pic,R.id.title,R.id.info,R.id.star,R.id.type});
         foodsList.setAdapter(adapter);

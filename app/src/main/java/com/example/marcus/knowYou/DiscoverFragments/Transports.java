@@ -16,6 +16,6 @@ public class Transports extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.transports,null);
+        return inflater.inflate(R.layout.discover_transports,null);
     }
 }

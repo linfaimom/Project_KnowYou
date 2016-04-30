@@ -20,7 +20,7 @@ public class Search extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.search);
+        setContentView(R.layout.travel_search);
         cityNames = getResources().getStringArray(R.array.Zhejiang);
         setText();
     }

@@ -6,7 +6,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <android.support.v4.app.FragmentTabHost
-        android:background="@color/color_f5f5f5"
         android:id="@android:id/tabhost"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -30,7 +29,6 @@
 
             <TabWidget
                 android:id="@android:id/tabs"
-                android:background="@android:color/white"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_gravity="bottom"/>

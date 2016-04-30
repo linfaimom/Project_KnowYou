@@ -31,7 +31,7 @@ public class Main extends FragmentActivity {
     private String[] label_ids = new String[]{"travel", "gps", "null", "messages", "me"};
     //pictures
     private int[] pictures = new int[]{R.drawable.travel_change, R.drawable.discover_change,
-            R.drawable.hotels_change, R.drawable.community_change, R.drawable.me_change};
+            0, R.drawable.community_change, R.drawable.me_change};
     //TabHost
     private FragmentTabHost tabHost;
 
@@ -69,7 +69,7 @@ public class Main extends FragmentActivity {
                 DisplayMetrics dm = new DisplayMetrics();
                 getWindowManager().getDefaultDisplay().getMetrics(dm);
                 final int HEIGHT = dm.heightPixels / 4;
-                View view = LayoutInflater.from(Main.this).inflate(R.layout.showpopupwindow, null);
+                View view = LayoutInflater.from(Main.this).inflate(R.layout.bottom_fragmenttabhost_showpopupwindow, null);
                 PopupWindow popWindow = new PopupWindow(view, ViewGroup.LayoutParams.MATCH_PARENT, HEIGHT);
                 popWindow.setTouchable(true);
                 popWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
@@ -95,7 +95,7 @@ public class Main extends FragmentActivity {
         View view = null;
         //单独为其设置按钮样式
         if (i == 2) {
-            view = inflater.inflate(R.layout.showpopupwindow_button, null);
+            view = inflater.inflate(R.layout.bottom_fragmenttabhost_showpopupwindow_button, null);
             final ImageView button = (ImageView) view.findViewById(R.id.button);
             button.setImageResource(R.drawable.show);
             return view;

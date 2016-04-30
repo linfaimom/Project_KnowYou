@@ -1,8 +1,11 @@
 package com.example.marcus.knowYou.TravelFragments;
 
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -14,13 +17,19 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.marcus.knowYou.R;
 import com.nightonke.boommenu.BoomMenuButton;
+import com.nightonke.boommenu.Types.BoomType;
+import com.nightonke.boommenu.Types.ButtonType;
+import com.nightonke.boommenu.Types.PlaceType;
+import com.nightonke.boommenu.Util;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 import me.relex.circleindicator.CircleIndicator;
 
@@ -39,7 +48,7 @@ public class Suggest extends Fragment {
     private ArrayList<View> viewPagerList;
     private ArrayList<Map<String,Integer>> gridViewList;
     private CircleIndicator indicator;
-    String[][] infos = new String[][]{
+    private String[][] infos = new String[][]{
             {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"},
             {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"},
             {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"},
@@ -51,12 +60,36 @@ public class Suggest extends Fragment {
             {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"},
             {"God翔","是否是打发斯蒂芬爱的方式啊所发生的是否是否的所发生的发生的发生的防守打法是否撒发生的发生的防守打法是的发生的发的发生的封"}
     };
+    private static String[] Colors = {
+            "#F44336",
+            "#E91E63",
+            "#9C27B0",
+            "#2196F3",
+            "#03A9F4",
+            "#00BCD4",
+            "#009688",
+            "#4CAF50",
+            "#8BC34A",
+            "#CDDC39",
+            "#FFEB3B",
+            "#FFC107",
+            "#FF9800",
+            "#FF5722",
+            "#795548",
+            "#9E9E9E",
+            "#607D8B"};
+
+    public static int GetRandomColor() {
+        Random random = new Random();
+        int p = random.nextInt(Colors.length);
+        return Color.parseColor(Colors[p]);
+    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         this.inflater = inflater;
-        view = inflater.inflate(R.layout.suggest,null);
+        view = inflater.inflate(R.layout.travel_suggest,null);
         setViewPager();
         setGridView();
         setListView();
@@ -76,7 +109,7 @@ public class Suggest extends Fragment {
             map.put("image",imagesId[i]);
             gridViewList.add(map);
         }
-        SimpleAdapter adapter = new SimpleAdapter(getActivity(),gridViewList,R.layout.suggest_grid_view,
+        SimpleAdapter adapter = new SimpleAdapter(getActivity(),gridViewList,R.layout.travel_suggest_gridview,
                 new String[]{"image"},new int[]{R.id.image});
         monthlyGridView.setAdapter(adapter);
     }
@@ -86,7 +119,7 @@ public class Suggest extends Fragment {
         indicator = (CircleIndicator) view.findViewById(R.id.indicator);
         viewPagerList = new ArrayList<>();
         for (int i=0; i<imagesId.length; i++){
-            View imageView = inflater.inflate(R.layout.suggest_viewpager_views,null);
+            View imageView = inflater.inflate(R.layout.travel_suggest_viewpager_views,null);
             ImageView image = (ImageView) imageView.findViewById(R.id.image);
             image.setImageResource(imagesId[i]);
             viewPagerList.add(imageView);
@@ -163,11 +196,11 @@ public class Suggest extends Fragment {
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolder viewHolder;
+        public View getView(int position, View convertView, final ViewGroup parent) {
+            final ViewHolder viewHolder;
 
             if (convertView == null){
-                convertView = inflater.inflate(R.layout.share_listview,null);
+                convertView = inflater.inflate(R.layout.travel_suggest_share_listview,null);
                 viewHolder = new ViewHolder();
                 viewHolder.userPic = (ImageView) convertView.findViewById(R.id.user_pic);
                 viewHolder.nickName = (TextView) convertView.findViewById(R.id.nickname);
@@ -188,6 +221,50 @@ public class Suggest extends Fragment {
             //image2
 
             viewHolder.time.setText("1小时前");
+
+            //set BoomMenu
+            final Drawable[] circleSubButtonDrawables = new Drawable[3];
+            int[] drawablesResource = new int[]{
+                    R.drawable.mark,
+                    R.drawable.refresh,
+                    R.drawable.copy
+            };
+            for (int i = 0; i < 3; i++)
+                circleSubButtonDrawables[i]
+                        = ContextCompat.getDrawable(parent.getContext(), drawablesResource[i]);
+
+            final int[][] subButtonColors = new int[3][2];
+            for (int i = 0; i < 3; i++) {
+                subButtonColors[i][1] = GetRandomColor();
+                subButtonColors[i][0] = Util.getInstance().getPressedColor(subButtonColors[i][1]);
+            }
+
+            final String[] circleSubButtonTexts = new String[]{
+                    "No. " + position,
+                    "No. " + position,
+                    "No. " + position};
+            viewHolder.menu.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    // Now with Builder, you can init BMB more convenient
+                    new BoomMenuButton.Builder()
+                            .subButtons(circleSubButtonDrawables, subButtonColors, circleSubButtonTexts)
+                            .button(ButtonType.CIRCLE)
+                            .boom(BoomType.PARABOLA)
+                            .place(PlaceType.CIRCLE_3_1)
+                            .subButtonsShadow(Util.getInstance().dp2px(2), Util.getInstance().dp2px(2))
+                            .onSubButtonClick(new BoomMenuButton.OnSubButtonClickListener() {
+                                @Override
+                                public void onClick(int buttonIndex) {
+                                    Toast.makeText(
+                                            parent.getContext(),
+                                            "On click " + circleSubButtonTexts[buttonIndex],
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            })
+                            .init(viewHolder.menu);
+                }
+            }, 1);
             return convertView;
         }
 
@@ -200,6 +277,7 @@ public class Suggest extends Fragment {
             TextView time;
             BoomMenuButton menu;
         }
+
     }
 
 }

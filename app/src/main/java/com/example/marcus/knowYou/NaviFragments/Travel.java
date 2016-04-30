@@ -46,7 +46,7 @@ public class Travel extends Fragment {
     }
 
     private void setImageButtons() {
-        //search event
+        //travel_search event
         search = (ImageButton) view.findViewById(R.id.search);
         search.setOnClickListener(new View.OnClickListener() {
             @Override

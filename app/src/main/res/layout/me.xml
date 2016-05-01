@@ -1,24 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/color_white"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <RelativeLayout
-        android:background="@drawable/scene2"
-        android:layout_width="match_parent"
-        android:layout_height="200dp">
+    <LinearLayout
+        android:background="@color/color_f5f5f5"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:src="@drawable/godxiang"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="center"
-            android:layout_width="64dp"
-            android:layout_height="64dp" />
+        <RelativeLayout
+            android:background="@drawable/scene3"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
 
-    </RelativeLayout>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:src="@drawable/godxiang"
+                android:layout_centerInParent="true"
+                android:layout_width="64dp"
+                android:layout_height="64dp" />
 
-</LinearLayout>
+            <TextView
+                android:text="God翔"
+                android:textSize="20sp"
+                android:textColor="@color/color_f5f5f5"
+                android:textStyle="bold"
+                android:layout_marginBottom="28dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@drawable/setting"
+                android:layout_marginTop="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:background="@color/color_white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="20"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="我的驴友"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/friend"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="64.7KM"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="我的旅途"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/spot"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ListView
+            android:background="@color/color_white"
+            android:id="@+id/listview"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"/>
+
+        <ListView
+            android:background="@color/color_white"
+            android:layout_marginTop="10dp"
+            android:id="@+id/listview2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+
+        <RelativeLayout
+            android:background="@color/color_white"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/about"
+                android:text="关于我们"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp" />
+
+            <ImageView
+                android:src="@drawable/about"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

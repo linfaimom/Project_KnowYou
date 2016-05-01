@@ -66,13 +66,12 @@
         <Button
             android:layout_marginTop="5dp"
             style="@style/Base.Widget.AppCompat.Button.Borderless"
-            android:id="@+id/register"
+            android:id="@+id/look"
             android:textSize="18sp"
-            android:textAlignment="textStart"
             android:gravity="start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/register"/>
+            android:text="@string/look"/>
 
         <Button
             android:layout_marginTop="5dp"

@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Login extends Activity implements View.OnClickListener{
 
-    private Button login,register;
+    private Button login,look;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,23 +17,14 @@ public class Login extends Activity implements View.OnClickListener{
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.login);
         login = (Button) findViewById(R.id.login);
-        register = (Button) findViewById(R.id.register);
+        look = (Button) findViewById(R.id.look);
         login.setOnClickListener(this);
-        register.setOnClickListener(this);
+        look.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.login :
-                Intent login = new Intent(Login.this,Main.class);
-                startActivity(login);
-                break;
-
-            case R.id.register :
-                Intent register = new Intent(Login.this,Register.class);
-                startActivity(register);
-                break;
-        }
+        Intent login = new Intent(Login.this,Main.class);
+        startActivity(login);
     }
 }

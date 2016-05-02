@@ -8,7 +8,7 @@
     <Button
         android:id="@+id/login"
         android:visibility="invisible"
-        android:background="@drawable/button_style"
+        android:background="@drawable/login_button_style"
         android:textSize="20sp"
         android:textColor="@color/color_white"
         android:layout_alignParentBottom="true"
@@ -22,7 +22,7 @@
     <Button
         android:id="@+id/register"
         android:visibility="invisible"
-        android:background="@drawable/button_style"
+        android:background="@drawable/login_button_style"
         android:textSize="20sp"
         android:textColor="@color/color_white"
         android:layout_alignParentBottom="true"

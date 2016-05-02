@@ -50,7 +50,7 @@
     <Button
         android:id="@+id/login"
         android:layout_below="@id/table"
-        android:background="@drawable/button_style"
+        android:background="@drawable/login_button_style"
         android:textSize="20sp"
         android:textColor="@android:color/holo_red_dark"
         android:layout_width="match_parent"

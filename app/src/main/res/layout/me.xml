@@ -10,7 +10,7 @@
         android:layout_height="wrap_content">
 
         <RelativeLayout
-            android:background="@drawable/scene3"
+            android:background="@drawable/scene2"
             android:layout_width="match_parent"
             android:layout_height="180dp">
 
@@ -23,9 +23,9 @@
             <TextView
                 android:text="God翔"
                 android:textSize="20sp"
-                android:textColor="@color/color_f5f5f5"
+                android:textColor="#cccccc"
                 android:textStyle="bold"
-                android:layout_marginBottom="28dp"
+                android:layout_marginBottom="25dp"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
                 android:layout_width="wrap_content"

@@ -11,7 +11,7 @@
 
         <ImageView
             android:layout_marginTop="8dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="11dp"
             android:id="@+id/user_pic"
             android:scaleType="centerCrop"
             android:layout_width="50dp"
@@ -51,25 +51,27 @@
         android:layout_marginLeft="72dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_marginTop="4dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/image1"
+                android:scaleType="fitXY"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="200dp" />
+                android:layout_height="100dp" />
 
             <ImageView
                 android:id="@+id/image2"
+                android:scaleType="fitXY"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="200dp" />
+                android:layout_height="100dp" />
 
         </LinearLayout>
 
@@ -101,7 +103,7 @@
     <!--占位显示-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="10dp">
+        android:layout_height="8dp">
         
     </LinearLayout>
 

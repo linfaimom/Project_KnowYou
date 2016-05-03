@@ -20,7 +20,7 @@ public class LoadActivity extends Activity {
         super.onCreate(savedInstanceState);
         getWindow().setFormat(PixelFormat.RGBA_8888);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DITHER);
-        setContentView(R.layout.load);
+        setContentView(R.layout.start);
         login = (Button) findViewById(R.id.login);
         register = (Button) findViewById(R.id.register);
         new Handler().postDelayed(new Runnable() {

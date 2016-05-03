@@ -13,7 +13,7 @@
             android:src="@drawable/search"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
 
         <AutoCompleteTextView
             android:id="@+id/autotext"
@@ -21,7 +21,7 @@
             android:inputType="text"
             android:layout_weight="9"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp" />
 
     </LinearLayout>
 

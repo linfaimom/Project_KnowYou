@@ -21,6 +21,7 @@
 
             <ImageView
                 android:src="@drawable/user"
+                android:layout_marginTop="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"/>
 
@@ -35,6 +36,7 @@
             android:layout_width="wrap_content">
 
             <ImageView
+                android:layout_marginTop="4dp"
                 android:src="@drawable/passwd"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"/>

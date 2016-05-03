@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+
 import com.example.marcus.knowYou.NaviFragments.Travel;
 import com.example.marcus.knowYou.NaviFragments.Discover;
 import com.example.marcus.knowYou.NaviFragments.Community;
@@ -28,7 +29,7 @@ public class Main extends FragmentActivity {
     //labels
     private String[] labels = new String[]{"旅行", "发现", "null", "社区", "我"};
     //label_ids
-    private String[] label_ids = new String[]{"travel", "gps", "null", "messages", "me"};
+    private String[] label_ids = new String[]{"travel", "discover", "null", "messages", "me"};
     //pictures
     private int[] pictures = new int[]{R.drawable.travel_change, R.drawable.discover_change,
             0, R.drawable.community_change, R.drawable.me_change};
@@ -68,7 +69,7 @@ public class Main extends FragmentActivity {
                 final View outer = v;
                 DisplayMetrics dm = new DisplayMetrics();
                 getWindowManager().getDefaultDisplay().getMetrics(dm);
-                final int HEIGHT = dm.heightPixels / 4;
+                final int HEIGHT = dm.heightPixels / 5 * 3;
                 View view = LayoutInflater.from(Main.this).inflate(R.layout.bottom_fragmenttabhost_showpopupwindow, null);
                 PopupWindow popWindow = new PopupWindow(view, ViewGroup.LayoutParams.MATCH_PARENT, HEIGHT);
                 popWindow.setTouchable(true);

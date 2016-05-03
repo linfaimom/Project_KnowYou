@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         app:tl_textUnselectColor="#000000"
         app:tl_textSelectColor="#ab2c2c"
+        app:tl_tab_space_equal="true"
         app:tl_indicator_style="TRIANGLE"
         app:tl_indicator_color="#ab2c2c"
         android:layout_height="48dp">

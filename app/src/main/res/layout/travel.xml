@@ -22,15 +22,16 @@
             android:layout_height="wrap_content" />
 
 
-        <com.flyco.tablayout.SlidingTabLayout
+        <com.flyco.tablayout.SegmentTabLayout
             android:layout_centerHorizontal="true"
             android:id="@+id/tabs"
             app:tl_tab_space_equal="true"
             app:tl_tab_padding="25dp"
             app:tl_textsize="20sp"
-            app:tl_textUnselectColor="#000000"
-            app:tl_textSelectColor="#ab2c2c"
-            app:tl_indicator_color="#ab2c2c"
+            app:tl_textUnselectColor="@color/color_cd3e3a"
+            app:tl_textSelectColor="@color/color_white"
+            app:tl_indicator_color="@color/color_cd3e3a"
+            app:tl_indicator_corner_radius="0dp"
             android:layout_width="wrap_content"
             android:layout_height="40dp"/>
 
@@ -45,12 +46,12 @@
 
     </RelativeLayout>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
+    <FrameLayout
+        android:id="@+id/travel_top_tabs"
         android:layout_below="@id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </android.support.v4.view.ViewPager>
+    </FrameLayout>
 
 </RelativeLayout>

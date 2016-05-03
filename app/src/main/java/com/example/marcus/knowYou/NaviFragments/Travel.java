@@ -17,6 +17,8 @@ import com.example.marcus.knowYou.R;
 import com.example.marcus.knowYou.Search;
 import com.example.marcus.knowYou.TravelFragments.TravelFriends;
 import com.example.marcus.knowYou.TravelFragments.Suggest;
+import com.flyco.tablayout.CommonTabLayout;
+import com.flyco.tablayout.SegmentTabLayout;
 import com.flyco.tablayout.SlidingTabLayout;
 
 import java.util.ArrayList;
@@ -29,8 +31,8 @@ public class Travel extends Fragment {
     private ImageButton search, message;
     private ArrayList<Fragment> fragments;
     private String[] tabNames = new String[]{"推荐", "驴友"};
-    private SlidingTabLayout tabLayout;
-    private ViewPager viewPager;
+    private SegmentTabLayout tabLayout;
+    //private ViewPager viewPager;
 
     @Nullable
     @Override
@@ -38,10 +40,10 @@ public class Travel extends Fragment {
         view = inflater.inflate(R.layout.travel, null);
         addFragments();
         setImageButtons();
-        viewPager = (ViewPager) view.findViewById(R.id.viewpager);
-        viewPager.setAdapter(new MyFragmentPagerAdapter(getChildFragmentManager(),fragments));
-        tabLayout = (SlidingTabLayout) view.findViewById(R.id.tabs);
-        tabLayout.setViewPager(viewPager);
+//        viewPager = (ViewPager) view.findViewById(R.id.viewpager);
+//        viewPager.setAdapter(new MyFragmentPagerAdapter(getChildFragmentManager(),fragments));
+        tabLayout = (SegmentTabLayout) view.findViewById(R.id.tabs);
+        tabLayout.setTabData(tabNames,getActivity(),R.id.travel_top_tabs,fragments);
         return view;
     }
 
@@ -66,28 +68,28 @@ public class Travel extends Fragment {
         fragments.add(travelFriends);
     }
 
-    class MyFragmentPagerAdapter extends FragmentPagerAdapter {
-        private ArrayList<Fragment> list;
-
-        public MyFragmentPagerAdapter(FragmentManager fm, ArrayList<Fragment> list) {
-            super(fm);
-            this.list = list;
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return list.get(position);
-        }
-
-        @Override
-        public int getCount() {
-            return list.size();
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return tabNames[position];
-        }
-
-    }
+//    class MyFragmentPagerAdapter extends FragmentPagerAdapter {
+//        private ArrayList<Fragment> list;
+//
+//        public MyFragmentPagerAdapter(FragmentManager fm, ArrayList<Fragment> list) {
+//            super(fm);
+//            this.list = list;
+//        }
+//
+//        @Override
+//        public Fragment getItem(int position) {
+//            return list.get(position);
+//        }
+//
+//        @Override
+//        public int getCount() {
+//            return list.size();
+//        }
+//
+//        @Override
+//        public CharSequence getPageTitle(int position) {
+//            return tabNames[position];
+//        }
+//
+//    }
 }

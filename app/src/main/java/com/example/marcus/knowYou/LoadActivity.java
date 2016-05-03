@@ -38,7 +38,7 @@ public class LoadActivity extends Activity {
                 register.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(LoadActivity.this,Register.class);
+                        Intent intent = new Intent(LoadActivity.this, Register.class);
                         startActivity(intent);
                     }
                 });

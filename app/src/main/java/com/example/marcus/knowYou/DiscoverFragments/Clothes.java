@@ -48,7 +48,7 @@ public class Clothes extends Fragment {
             map.put("content",contents[i]);
             datas.add(map);
         }
-        ListAdapter adapter = new SimpleAdapter(getActivity(),datas,R.layout.discover_clothes_gridview,
+        ListAdapter adapter = new SimpleAdapter(getActivity(),datas,R.layout.discover_staggeredgridview,
                 new String[]{"image","content"},
                 new int[]{R.id.image,R.id.content});
         gridView.setAdapter(adapter);

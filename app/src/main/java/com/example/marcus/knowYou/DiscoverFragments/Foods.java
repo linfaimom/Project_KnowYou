@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.etsy.android.grid.StaggeredGridView;
@@ -23,17 +22,13 @@ import java.util.Map;
 public class Foods extends Fragment {
     private StaggeredGridView foodsList;
     private List<Map<String,String>> list;
-    private int[] pics = new int[]{R.drawable.food1,R.drawable.food2,R.drawable.food3,R.drawable.food4,R.drawable.food5,R.drawable.food6};
+    private int[] pics = new int[]{
+            R.drawable.food1,R.drawable.food2,R.drawable.food3,
+            R.drawable.food4,R.drawable.food5,R.drawable.food6};
     private String[] infos = new String[]{
-            "金华汤包",
-            "东阳瓦罐鸡",
-            "兰溪鸡子馃",
-            "油炸臭干夹馒头",
-            "金华拉拉面",
-            "金华大汤圆"
-    };
+            "金华汤包", "东阳瓦罐鸡", "兰溪鸡子馃",
+            "油炸臭干夹馒头", "金华拉拉面", "金华大汤圆"};
     private SimpleAdapter adapter;
-
 
     @Nullable
     @Override
@@ -56,7 +51,7 @@ public class Foods extends Fragment {
     }
 
     private void setAdapter() {
-        adapter = new SimpleAdapter(getActivity(),list,R.layout.discover_staggeredgridview,
+        adapter = new SimpleAdapter(getActivity(),list,R.layout.discover_foods_gridview,
                 new String[]{"image","content"},
                 new int[]{R.id.image,R.id.content});
         foodsList.setAdapter(adapter);

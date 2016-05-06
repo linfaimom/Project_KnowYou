@@ -9,7 +9,7 @@
         android:id="@+id/tablayout"
         android:background="@color/color_white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:orientation="horizontal">
 
         <ImageButton
@@ -24,16 +24,17 @@
 
         <com.flyco.tablayout.SegmentTabLayout
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:id="@+id/tabs"
             app:tl_tab_space_equal="true"
             app:tl_tab_padding="25dp"
-            app:tl_textsize="20sp"
-            app:tl_textUnselectColor="@color/color_cd3e3a"
-            app:tl_textSelectColor="@color/color_white"
-            app:tl_indicator_color="@color/color_cd3e3a"
-            app:tl_indicator_corner_radius="0dp"
+            app:tl_textsize="18sp"
+            app:tl_textUnselectColor="@android:color/black"
+            app:tl_textSelectColor="@android:color/white"
+            app:tl_indicator_color="@android:color/darker_gray"
+            app:tl_indicator_corner_radius="2dp"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"/>
+            android:layout_height="30dp"/>
 
         <ImageButton
             android:id="@+id/message"
@@ -47,7 +48,7 @@
     </RelativeLayout>
 
     <FrameLayout
-        android:id="@+id/travel_top_tabs"
+        android:id="@+id/travel_tabs_content"
         android:layout_below="@id/tablayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">

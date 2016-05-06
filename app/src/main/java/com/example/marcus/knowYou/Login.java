@@ -24,7 +24,7 @@ public class Login extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        Intent login = new Intent(Login.this,Main.class);
+        Intent login = new Intent(Login.this,MainActivity.class);
         startActivity(login);
     }
 }

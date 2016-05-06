@@ -1,6 +1,5 @@
 package com.example.marcus.knowYou.NaviFragments;
 
-import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,11 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.marcus.knowYou.DiscoverFragments.KnowYouFragment.Clothes;
+import com.example.marcus.knowYou.DiscoverFragments.KnowYouFragment.Foods;
+import com.example.marcus.knowYou.DiscoverFragments.KnowYouFragment.Hotels;
+import com.example.marcus.knowYou.DiscoverFragments.KnowYouFragment.Transports;
 import com.example.marcus.knowYou.R;
-import com.example.marcus.knowYou.DiscoverFragments.Clothes;
-import com.example.marcus.knowYou.DiscoverFragments.Foods;
-import com.example.marcus.knowYou.DiscoverFragments.Hotels;
-import com.example.marcus.knowYou.DiscoverFragments.Transports;
 import com.flyco.tablayout.SlidingTabLayout;
 
 import java.util.ArrayList;
@@ -32,7 +31,7 @@ public class Discover extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.discover_viewpager,null);
+        View view = inflater.inflate(R.layout.discover_knowyou_viewpager,null);
         addFragments();
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
         MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getChildFragmentManager(), fragments);

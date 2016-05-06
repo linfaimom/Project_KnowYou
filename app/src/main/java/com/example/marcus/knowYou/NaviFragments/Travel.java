@@ -43,7 +43,7 @@ public class Travel extends Fragment {
 //        viewPager = (ViewPager) view.findViewById(R.id.viewpager);
 //        viewPager.setAdapter(new MyFragmentPagerAdapter(getChildFragmentManager(),fragments));
         tabLayout = (SegmentTabLayout) view.findViewById(R.id.tabs);
-        tabLayout.setTabData(tabNames,getActivity(),R.id.travel_top_tabs,fragments);
+        tabLayout.setTabData(tabNames,getActivity(),R.id.travel_tabs_content,fragments);
         return view;
     }
 

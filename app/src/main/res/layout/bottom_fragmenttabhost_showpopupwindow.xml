@@ -41,7 +41,7 @@
     <LinearLayout
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="240dp">
 
         <EditText
             android:hint="说点什么吧..."
@@ -57,30 +57,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <RelativeLayout
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:src="@drawable/picture"
-            android:layout_alignParentLeft="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <ImageView
-            android:src="@drawable/video"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <ImageView
-            android:src="@drawable/voice"
-            android:layout_alignParentRight="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </RelativeLayout>
 
 </LinearLayout>

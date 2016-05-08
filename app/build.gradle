@@ -34,15 +34,9 @@ dependencies {
     compile 'com.github.medyo:android-about-page:1.0.4'
     compile 'com.yalantis:flipviewpager:1.0.0'
     compile 'com.etsy.android.grid:library:1.0.5'
-    compile files('libs/baidumapapi_base_v3_7_3.jar')
-    compile files('libs/baidumapapi_cloud_v3_7_3.jar')
-    compile files('libs/baidumapapi_map_v3_7_3.jar')
-    compile files('libs/baidumapapi_radar_v3_7_3.jar')
-    compile files('libs/baidumapapi_search_v3_7_3.jar')
-    compile files('libs/baidumapapi_util_v3_7_3.jar')
-    compile 'com.wang.avi:library:1.0.5'
     compile 'com.nineoldandroids:library:2.4.0'
-    compile files('libs/locSDK_6.23.jar')
+    compile files('libs/AMap_2DMap_V2.8.1_20160202.jar')
+    compile files('libs/AMap_Location_V2.4.1_20160414.jar')
 }
 
 

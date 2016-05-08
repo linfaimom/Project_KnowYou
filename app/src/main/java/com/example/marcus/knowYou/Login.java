@@ -10,11 +10,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
-import com.wang.avi.AVLoadingIndicatorView;
-
 public class Login extends Activity implements View.OnClickListener{
     private ProgressDialog dialog;
-    private AVLoadingIndicatorView anim;
     private Button login,look;
 
     @Override
@@ -24,7 +21,6 @@ public class Login extends Activity implements View.OnClickListener{
         setContentView(R.layout.login);
         login = (Button) findViewById(R.id.login);
         look = (Button) findViewById(R.id.look);
-        anim = (AVLoadingIndicatorView) findViewById(R.id.anim);
         login.setOnClickListener(this);
         look.setOnClickListener(this);
     }

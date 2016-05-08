@@ -10,7 +10,7 @@
         android:layout_height="150dp">
 
         <ImageView
-            android:src="@drawable/scene4"
+            android:src="@drawable/scene2"
             android:scaleType="fitXY"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -43,7 +43,7 @@
         android:layout_height="150dp">
 
         <ImageView
-            android:src="@drawable/girl"
+            android:src="@drawable/scene4"
             android:scaleType="fitXY"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -76,7 +76,7 @@
         android:layout_height="150dp">
 
         <ImageView
-            android:src="@drawable/scene2"
+            android:src="@drawable/scene1"
             android:scaleType="fitXY"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

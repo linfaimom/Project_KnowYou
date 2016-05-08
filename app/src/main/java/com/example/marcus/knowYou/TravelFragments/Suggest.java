@@ -1,5 +1,6 @@
 package com.example.marcus.knowYou.TravelFragments;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -19,6 +21,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.marcus.knowYou.MonthClasses.HonKong;
 import com.example.marcus.knowYou.R;
 import com.nightonke.boommenu.BoomMenuButton;
 import com.nightonke.boommenu.Types.BoomType;
@@ -78,6 +81,8 @@ public class Suggest extends Fragment {
             "#795548",
             "#9E9E9E",
             "#607D8B"};
+    //to be added.
+    private Class[] monthClasses = new Class[]{HonKong.class,HonKong.class,HonKong.class,HonKong.class};
 
     public static int GetRandomColor() {
         Random random = new Random();
@@ -112,6 +117,14 @@ public class Suggest extends Fragment {
         SimpleAdapter adapter = new SimpleAdapter(getActivity(),gridViewList,R.layout.travel_suggest_gridview,
                 new String[]{"image"},new int[]{R.id.image});
         monthlyGridView.setAdapter(adapter);
+        //设置点击事项
+        monthlyGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getActivity(),monthClasses[position]);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setViewPager() {

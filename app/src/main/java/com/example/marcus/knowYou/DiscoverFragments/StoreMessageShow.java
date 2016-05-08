@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.baidu.mapapi.SDKInitializer;
-import com.baidu.mapapi.map.MapView;
 import com.example.marcus.knowYou.R;
 
 /**
